@@ -1,0 +1,6 @@
+[submodule "wa_backend"]
+	path = wa_backend
+	url = https://github.com/lizzieb1416/wa_backend.git
+[submodule "wa_frontend"]
+	path = wa_frontend
+	url = https://github.com/lizzieb1416/wa_frontend.git
