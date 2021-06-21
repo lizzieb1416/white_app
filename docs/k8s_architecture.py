@@ -28,7 +28,6 @@ with Diagram("k8s Architecture", show=False):
         db_vol = Vol("DB Volume")
         be_vol = Vol("BE Volume")
 
-
     fe_ing >> fe_svc
 
     fe_svc >> fe_pod
