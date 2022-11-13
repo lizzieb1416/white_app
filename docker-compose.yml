@@ -1,18 +1,22 @@
 version: "3.9"
 services:
   wa_backend:
-    image: wa_backend
+    # image: wa_backend
+    build:
+      context: ./wa_backend
     ports:
       - "3000:5000"
-    environment: 
+    environment:
       - FLASK_APP=wa_backend
       - FLASK_ENV=development
       - FLASK_DEBUG=True
       - JSON_FILE_PATH=todolist.json
       - DATABASE_URL=sqlite:///database.db
   wa_frontend:
-    image: wa_frontend
+    # image: wa_frontend
+    build:
+      context: ./wa_frontend
     ports:
       - "8080:80"
-    environment: 
+    environment:
       - API_URL=http://localhost:3000/api/
